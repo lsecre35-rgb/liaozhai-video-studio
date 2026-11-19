@@ -1,0 +1,61 @@
+{
+  "project": "促織",
+  "duration_seconds": 20,
+  "visual_reference": "促織奇遇：蟋蟀與小書生.png",
+  "continuity_lock": {
+    "style": "traditional Chinese watercolor picture-book illustration, visible rice-paper grain, soft pigment bleeding, fine hand-drawn dark ink outlines, muted powder blue, warm ochre and dusty rose palette",
+    "boy": "same small boy in every shot: short dark brown-black hair with uneven fringe, round childlike face, blue cross-collar traditional robe",
+    "father": "middle-aged father, dark topknot, moustache and short goatee, muted blue-gray robe; worried gentle expression",
+    "mother": "young mother with dark hair in a bun, dusty rose-pink robe",
+    "cricket": "small brown cricket with long antennae and powerful hind legs; anatomically consistent",
+    "negative": "do not redesign faces, hairstyles, clothing, body proportions, or palette; no photorealism, no anime, no 3D, no extra limbs, no morphing, no text, no camera shake"
+  },
+  "shots": [
+    {
+      "time": "00-04",
+      "title": "月下初遇",
+      "reference": "Use the original illustration of the boy discovering the cricket. Preserve its exact composition.",
+      "motion_prompt": "Animate only subtle actions in this exact watercolor illustration. The boy gently leans closer and blinks once, his eyes following the small brown cricket. The cricket slowly waves its antennae, shifts its front legs, then makes one small natural hop and lands. A few nearby leaves sway in a soft night breeze. Preserve the boy's exact face, short dark hair, blue robe, and the cricket's brown body. Stable camera, natural restrained movement.",
+      "narration": "從前，有個小書生，最喜歡小小的蟋蟀。",
+      "sfx": "quiet night insects, one soft cricket chirp"
+    },
+    {
+      "time": "04-08",
+      "title": "父母憂心",
+      "reference": "Use the family scene from the provided watercolor illustrations. Preserve father and mother's distinct clothing and faces.",
+      "motion_prompt": "Keep the exact original family illustration. The father in muted blue-gray robe lowers his brows slightly and glances toward the boy; his moustache and goatee remain unchanged. The mother in dusty rose robe gently turns her head toward the child. The boy in blue robe lowers his gaze. Only slight blinking, breathing and small head movement. Preserve all faces, costumes, layout and watercolor texture.",
+      "narration": "可是，家裡出了事，爹娘整天愁眉不展。",
+      "sfx": "soft indoor ambience, faint cloth movement"
+    },
+    {
+      "time": "08-12",
+      "title": "蟋蟀鬥勇",
+      "reference": "Use the cricket-fighting illustration with the two crickets and watching crowd.",
+      "motion_prompt": "Preserve the exact watercolor scene and both cricket designs. The brown cricket crouches, springs forward in one quick short hop, lands, and raises its antennae. The dark cricket makes a small defensive shift. The watching people in the background react with restrained blinking and tiny head movements only. Keep every face and costume stable; no insect deformation, no extra legs.",
+      "narration": "沒想到，這隻小蟋蟀，竟然勇敢得不得了！",
+      "sfx": "quick cricket chirps, tiny hop and landing sound, soft crowd gasp"
+    },
+    {
+      "time": "12-16",
+      "title": "宮中奇遇",
+      "reference": "Use the palace scene showing the boy, emperor and cricket cage.",
+      "motion_prompt": "Animate the exact palace watercolor illustration. The emperor in the golden ochre robe smiles and gives a small approving nod. The boy in the same blue robe looks up with quiet wonder. The cricket inside the cage moves its antennae and makes one tiny hop. Preserve the emperor's face, crown, robe pattern, the boy's face and the cage structure. Restrained movement, locked composition.",
+      "narration": "這件事傳進宮裡，連皇帝也聽說了。",
+      "sfx": "subtle palace room tone, one delicate cricket chirp"
+    },
+    {
+      "time": "16-20",
+      "title": "故事落幕",
+      "reference": "Use the original boy-and-cricket illustration as the closing image.",
+      "motion_prompt": "Return to the same boy and same small brown cricket from the opening shot. The boy slowly lifts his eyes and gives a faint relieved smile. The cricket settles beside him and gently moves its antennae. A few leaves sway softly. Preserve exact character identity, blue robe, brown cricket, watercolor paper grain and ink outlines. Warm, tender ending; no morphing, no new objects, almost static camera.",
+      "narration": "從此，這段奇妙的蟲鳴，成了他心裡最難忘的故事。",
+      "sfx": "gentle cricket chirp, warm soft musical resolve"
+    }
+  ],
+  "audio_direction": {
+    "language": "Traditional Mandarin, Taiwan accent",
+    "voice": "warm storyteller, natural conversational cadence, clear child-friendly delivery",
+    "music": "very soft traditional Chinese instrumental texture, keep under narration",
+    "mix": "voice clearly in front; cricket sounds only at scene transitions and pauses; no abrupt peaks"
+  }
+}
