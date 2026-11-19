@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>促織｜20 秒水彩動畫工作室</title>
+<style>
+:root{color-scheme:dark;--bg:#151923;--card:#202838;--ink:#f4eee3;--muted:#b8c0cb;--gold:#d7b77b;--line:#394456}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(160deg,#1c2532,#11151d);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"PingFang TC",sans-serif}
+main{max-width:760px;margin:auto;padding:24px 16px 60px}h1{font-size:30px;margin:8px 0}h2{font-size:19px;margin:0 0 8px;color:var(--gold)}p{margin:6px 0;color:var(--muted)}.lead{font-size:17px}.notice{border:1px solid #6a5738;background:#30291f;padding:14px;border-radius:14px;margin:18px 0}
+.scene{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:14px 0}.time{font-size:12px;color:var(--gold);letter-spacing:.08em}.prompt{white-space:pre-wrap;background:#151c27;border-radius:10px;padding:12px;color:#e7e9ed;font-size:14px;margin:12px 0}
+button,a.btn{display:inline-block;border:0;border-radius:10px;padding:11px 14px;background:var(--gold);color:#201b14;font-weight:700;text-decoration:none;font-size:14px;margin:4px 6px 4px 0;cursor:pointer}.secondary{background:#364459;color:#f3eee5}.small{font-size:13px}.foot{border-top:1px solid var(--line);padding-top:18px;margin-top:28px}
+</style></head>
+<body><main>
+<div class="time">LIAOZHAI · 20 SECOND SHORT FILM</div>
+<h1>《促織》水彩動畫工作室</h1>
+<p class="lead">五段短動畫的分鏡與動作提示，目標總長約 20 秒。</p>
+<div class="notice"><b>製作方式與限制</b><p>本頁整理了可直接複製的動作提示。免費 Wan 2.2 公開 GPU 每段通常只能生成約 3.5–4.5 秒，可能排隊或暫時離線。每段都必須使用同一張角色參考圖，才能盡量維持人物一致。生成器：NiftyVid。</p><a class="btn" href="https://igorcsis.github.io/nifty-vid/" target="_blank" rel="noopener">開啟免費影片生成器</a></div>
+<div id="scenes"></div>
+<div class="foot"><h2>統一角色與畫風設定</h2><p>每一段都沿用同一張原始插畫作為 image input。不要重新設計人物：黑色短髮男孩、藍色交領古裝、圓潤童顏；棕色蟋蟀；父母造型依參考圖。宣紙肌理、淡藍與赭紅水彩、細緻手繪墨線、古代中式庭院／宮廷。保留原圖構圖與人物外觀，只讓指定物件自然活動。</p>
+<p class="small">注意：生成模型可能改變細節；若某段人物明顯走樣，重試該段，不要把走樣片段接進成片。</p></div>
+</main>
+<script>
+const scenes=[
+{t:"00–04 秒｜月下初遇",d:"男孩發現蟋蟀",p:"Animate this exact watercolor illustration while preserving the original character designs, faces, clothing, composition, and traditional Chinese storybook watercolor style. The little black-haired boy in a blue cross-collar robe gently lowers his head and leans forward with curiosity. The small brown cricket makes one delicate hop and slowly moves its antennae. A few grass blades sway softly in a faint night breeze. Subtle natural character motion, stable anatomy, delicate ink outlines, rice-paper texture. Keep the camera nearly still. No new characters, no morphing, no style change."},
+{t:"04–08 秒｜家中憂愁",d:"父母擔憂，孩子沉默",p:"Animate this exact watercolor illustration. Preserve every person's identity, face, hairstyle, clothing, proportions, and the original composition. The father makes a small worried movement and glances toward the child; the mother gently turns her gaze with concern; the boy lowers his eyes slightly. Only subtle breathing, blinking, and small head movements. Traditional Chinese watercolor on textured rice paper, fine hand-drawn ink lines. No new objects, no face distortion, no camera shake."},
+{t:"08–12 秒｜蟋蟀出戰",d:"蟋蟀在地面跳動",p:"Animate the exact small brown cricket in this original illustration. Keep the boy and all other characters unchanged and recognizable. The cricket crouches, makes one quick short hop across the ground, lands, and flicks its antennae. Nearby grass moves slightly. Preserve the watercolor pigment texture, fine ink outlines, warm muted colors, and original scene composition. Natural insect motion, no exaggerated transformation, no extra limbs."},
+{t:"12–16 秒｜宮廷奇遇",d:"蟋蟀在宮中跳躍",p:"Preserve the original palace scene, character designs, costumes, and watercolor style. The small brown cricket makes a quick controlled hop on the palace floor; its antennae twitch after landing. The onlookers make a subtle surprised reaction with slight head movement. Keep all faces stable and avoid adding people. Delicate Chinese storybook watercolor, rice-paper grain, fine ink outlines, stable camera."},
+{t:"16–20 秒｜故事落幕",d:"少年與蟋蟀的溫暖結尾",p:"Animate this exact illustration with the same boy, same blue robe, same face and same brown cricket. The boy slowly lifts his gaze and gives a faint relieved smile; the cricket gently moves its antennae and settles beside him. A soft breeze stirs a few nearby leaves. Keep motion subtle and emotionally warm. Preserve original watercolor and ink style, paper texture, composition and character proportions. No morphing, no new characters, no camera movement."}
+];
+const root=document.getElementById('scenes');
+scenes.forEach((s,i)=>{const el=document.createElement('section');el.className='scene';const h=document.createElement('h2');h.textContent=s.t;const desc=document.createElement('p');desc.textContent=s.d;const pre=document.createElement('div');pre.className='prompt';pre.textContent=s.p;const copy=document.createElement('button');copy.textContent='複製這段動作提示';copy.onclick=async()=>{try{await navigator.clipboard.writeText(s.p);copy.textContent='已複製';}catch(e){copy.textContent='請長按提示文字複製';}};const open=document.createElement('a');open.className='btn secondary';open.href='https://igorcsis.github.io/nifty-vid/';open.target='_blank';open.rel='noopener';open.textContent='前往生成這段';el.append(h,desc,pre,copy,open);root.append(el);});
+</script></body></html>
